@@ -47,7 +47,7 @@ console.log(processInput(10));
 
 
 
-// //PROBLEM 3:
+ //PROBLEM 3:
 
 
 const formatCoordinate =  (longtitude: number, latitude: number, locationName:string): [number, number, string] => {
@@ -73,3 +73,23 @@ console.log(concatenateArrays([1, 2, 3], [4, 5, 6]));
 console.log(concatenateArrays(["a", "b", "c"], ["A", "B", "C"]));
 
 
+//PROBLEM 5:
+
+interface Course {
+    title: string;
+    students: number;
+    isPublished: boolean;
+}
+
+const courses: Course[] = [
+    { title: "Nodejs", students: 100, isPublished: true },
+    { title: "React", students: 200, isPublished: false },
+    { title: "Angular", students: 150, isPublished: true },
+    { title: "Vue", students: 50, isPublished: false },
+];
+
+const getPopularCourses = (courses: Course[], minStudents: number): Course[] => {
+    return courses.filter((course) => course.students > minStudents && course.isPublished === true);
+};
+
+console.log(getPopularCourses(courses, 100));
