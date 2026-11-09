@@ -50,6 +50,15 @@ console.log(processInput(10));
 //PROBLEM 3:
 
 
-const formatCoordinate: readonly[ latitude: number, longitude: number, locationName: string] = [40.7128, -74.0060, "New York City"]; 
+const formatCoordinate =  (longtitude: number, latitude: number, locationName:string): [number, number, string] => {
+        return [latitude, longtitude, locationName];
 
-console.log(`Location: ${formatCoordinate[2]}, Latitude: ${formatCoordinate[0]}, Longitude: ${formatCoordinate[1]}`);
+}
+
+const data = formatCoordinate(74.0060, 40.7128, "New York City");
+
+console.log(`Location: ${data[2]}, Latitude: ${data[0]}, Longitude: ${data[1]}`);
+
+//PROBLEM 4:
+
+
