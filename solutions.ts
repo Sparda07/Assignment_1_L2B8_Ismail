@@ -1,63 +1,63 @@
 // //PROBLEM 1: 
 
-// const multiplyvalue = (value: number, multiplier?: number): number => {
-//     if (multiplier === undefined) {
-//         multiplier = 2;
-//     }
-//     return value * multiplier;
-// }
+const multiplyvalue = (value: number, multiplier?: number): number => {
+    if (multiplier === undefined) {
+        multiplier = 2;
+    }
+    return value * multiplier;
+}
 
-// console.log(multiplyvalue(5,3)); 
-// console.log(multiplyvalue(5)); 
-// console.log(multiplyvalue(5,0)); 
-// console.log(multiplyvalue(500,3)); 
-// console.log(multiplyvalue(1234)); 
-// console.log(multiplyvalue(1234,0)); 
+console.log(multiplyvalue(5,3)); 
+console.log(multiplyvalue(5)); 
+console.log(multiplyvalue(5,0)); 
+console.log(multiplyvalue(500,3)); 
+console.log(multiplyvalue(1234)); 
+console.log(multiplyvalue(1234,0)); 
 
 
 
 // //PROBLEM 2:
 
 
-// const processInput = (input: string | number | boolean) => {
-//     if (typeof input === "string") {
-//         return input.trim().toLowerCase();
-//     }
+const processInput = (input: string | number | boolean) => {
+    if (typeof input === "string") {
+        return input.trim().toLowerCase();
+    }
 
-//     if (typeof input === "number") {
-//         return input * 10;
-//     }
+    if (typeof input === "number") {
+        return input * 10;
+    }
 
-//     if (typeof input === "boolean") {
-//         return input ? "Active" : "Inactive";
-// }
+    if (typeof input === "boolean") {
+        return input ? "Active" : "Inactive";
+}
 
-// };
+};
 
-// console.log(processInput("  Hello Ismail  "));
-// console.log(processInput(5));
-// console.log(processInput(true));
-// console.log(processInput(false));
-// console.log(processInput("Hello Rahim   "));
-// console.log(processInput("  Hello Karim"));
-// console.log(processInput("Hello Ismail"));
-// console.log(processInput(1234));
-// console.log(processInput(4567));
-// console.log(processInput(10));
+console.log(processInput("  Hello Ismail  "));
+console.log(processInput(5));
+console.log(processInput(true));
+console.log(processInput(false));
+console.log(processInput("Hello Rahim   "));
+console.log(processInput("  Hello Karim"));
+console.log(processInput("Hello Ismail"));
+console.log(processInput(1234));
+console.log(processInput(4567));
+console.log(processInput(10));
 
 
 
 // //PROBLEM 3:
 
 
-// const formatCoordinate =  (longtitude: number, latitude: number, locationName:string): [number, number, string] => {
-//         return [latitude, longtitude, locationName];
+const formatCoordinate =  (longtitude: number, latitude: number, locationName:string): [number, number, string] => {
+        return [latitude, longtitude, locationName];
 
-// }
+}
 
-// const data = formatCoordinate(74.0060, 40.7128, "New York City");
+const data = formatCoordinate(74.0060, 40.7128, "New York City");
 
-// console.log(`Location: ${data[2]}, Latitude: ${data[0]}, Longitude: ${data[1]}`);
+console.log(`Location: ${data[2]}, Latitude: ${data[0]}, Longitude: ${data[1]}`);
 
 
 
