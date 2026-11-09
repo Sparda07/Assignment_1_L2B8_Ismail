@@ -1,18 +1,18 @@
 // //PROBLEM 1: 
 
-const multiplyvalue = (value: number, multiplier?: number): number => {
+const multiplyValue = (value: number, multiplier?: number): number => {
     if (multiplier === undefined) {
         multiplier = 2;
     }
     return value * multiplier;
 }
 
-console.log(multiplyvalue(5,3)); 
-console.log(multiplyvalue(5)); 
-console.log(multiplyvalue(5,0)); 
-console.log(multiplyvalue(500,3)); 
-console.log(multiplyvalue(1234)); 
-console.log(multiplyvalue(1234,0)); 
+console.log(multiplyValue(5,3)); 
+console.log(multiplyValue(5)); 
+console.log(multiplyValue(5,0)); 
+console.log(multiplyValue(500,3)); 
+console.log(multiplyValue(1234)); 
+console.log(multiplyValue(1234,0)); 
 
 
 
