@@ -111,3 +111,37 @@ const pluckValues = <T, K extends keyof T>(array: T[], key: K): T[K][] => {
 console.log(pluckValues(students, "name"));
 console.log(pluckValues(students, "age"));
 console.log(pluckValues(students, "department"));
+
+//PROBLEM 7:
+
+class Employee {
+    protected name: string;
+    private baseSalary: number;
+
+    constructor(name: string, baseSalary: number) {
+        this.name = name;
+        this.baseSalary = baseSalary;
+    }
+
+    getDetails = (): string => {
+        return `Name: ${this.name}, Base Salary: ${this.baseSalary}`;
+    }
+}
+
+
+class Manager extends Employee {
+    private department: string;
+
+    constructor(name: string, baseSalary: number, department: string) {
+        super(name, baseSalary);
+        this.department = department;
+    }
+
+    getRoleInfo = (): string => {
+        return `Role: Manager, Department: ${this.department}`;
+    }
+}
+
+const manager1 = new Manager("Karim", 70000, "Sales");
+console.log(manager1.getDetails());
+console.log(manager1.getRoleInfo());
