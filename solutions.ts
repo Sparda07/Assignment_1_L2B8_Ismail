@@ -93,3 +93,21 @@ const getPopularCourses = (courses: Course[], minStudents: number): Course[] => 
 };
 
 console.log(getPopularCourses(courses, 100));
+
+
+//PROBLEM 6:
+
+const students = [
+    { name: "Ismail", age: 26, department: "Computer Science" },
+    { name: "Karim", age: 28, department: "Mathematics"},
+    { name: "Rahim", age: 24, department: "Physics"  },
+    { name: "Jamal", age: 30, department: "Chemistry" },
+];
+
+const pluckValues = <T, K extends keyof T>(array: T[], key: K): T[K][] => {
+    return array.map((item) => item[key]);
+}
+
+console.log(pluckValues(students, "name"));
+console.log(pluckValues(students, "age"));
+console.log(pluckValues(students, "department"));
