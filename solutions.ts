@@ -145,3 +145,21 @@ class Manager extends Employee {
 const manager1 = new Manager("Karim", 70000, "Sales");
 console.log(manager1.getDetails());
 console.log(manager1.getRoleInfo());
+
+
+
+//PROBLEM 8:
+
+const validateAgeAsync = (age: number): Promise<string> => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (age >= 18) {
+                resolve("Access granted");
+            } else {
+                reject("Access Denied: Must be 18 or older");
+            }
+        }, 1000);
+    });
+};
+
+console.log(validateAgeAsync(20).then((message) => console.log(message)).catch((error) => console.error(error)));
